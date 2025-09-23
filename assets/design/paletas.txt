@@ -1,0 +1,20 @@
+Paleta 1
+#3d1fde
+#2e17b2
+#1e0f85 
+#0f0859 (destaques)
+#00002d - escuro (fundo)
+
+Paleta 2
+#5789C7
+#2A467E
+#213263
+#1C2654
+#172145 - escuro
+
+Paleta 3
+303D55
+222C3E
+162238
+132240
+01050D - escuro

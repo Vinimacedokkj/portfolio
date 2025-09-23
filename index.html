@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.KODE - Desenvolvimento Web</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <div class="logo">T.KODE</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#inicio" class="nav-link active" onclick="showSection('inicio')">INÍCIO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#servicos" class="nav-link" onclick="showSection('servicos')">SERVIÇOS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projetos" class="nav-link" onclick="showSection('projetos')">PROJETOS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#sobre" class="nav-link" onclick="showSection('sobre')">SOBRE MIM</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contato" class="nav-link" onclick="showSection('contato')">CONTATO</a>
+                </li>
+            </ul>
+            
+            <div class="theme-toggle">
+                <div class="toggle-container">
+                    <span class="toggle-label">Tema Claro</span>
+                    <div class="toggle-switch" onclick="toggleTheme()">
+                        <div class="toggle-slider"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <!-- Seção Início -->
+            <section id="inicio" class="section active">
+                <div class="hero">
+                    <h1>Olá, eu sou o Vinicius Macedo</h1>
+                    <p>Desenvolvedor Web • Pronto para criar sua experiência digital</p>
+                    <a href="#contato" class="cta-button" onclick="showSection('contato')">
+                        <i class="fas fa-rocket"></i> Vamos Trabalhar Juntos
+                    </a>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                        <p>Interfaces modernas e responsivas. tecnologias de ponta para criar experiências de usuário excepcionais.</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-server"></i> Backend</h3>
+                        <p>APIs robustas e escaláveis com Node.js, Python e banco de dados para suportar suas aplicações web.</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-mobile-alt"></i> Mobile</h3>
+                        <p>Aplicações mobile nativas e híbridas que funcionam perfeitamente em qualquer dispositivo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Serviços -->
+            <section id="servicos" class="section">
+                <h2 class="section-title">Meus Serviços</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Sites e aplicações web completas, desde landing pages até sistemas complexos de e-commerce e gerenciamento.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Design Responsivo</h3>
+                        <p>Interfaces que se adaptam perfeitamente a qualquer tela, garantindo uma experiência consistente em todos os dispositivos.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Otimização SEO</h3>
+                        <p>Melhore a visibilidade do seu site nos mecanismos de busca com técnicas avançadas de SEO.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Manutenção e Suporte</h3>
+                        <p>Suporte contínuo para manter seu site sempre atualizado, seguro e funcionando perfeitamente.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Projetos -->
+            <section id="projetos" class="section">
+                <h2 class="section-title">Projetos Recentes</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>E-commerce ModaStyle</h3>
+                        <p>Plataforma completa de e-commerce com painel administrativo, sistema de pagamentos e gestão de estoque. Desenvolvida em React e Node.js.</p>
+                    </div>
+                    <div class="card">
+                        <h3>App TaskManager</h3>
+                        <p>Aplicação de gerenciamento de tarefas com funcionalidades avançadas de colaboração em equipe e relatórios detalhados.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Portal HealthCare</h3>
+                        <p>Sistema de gestão hospitalar com agendamento de consultas, prontuário eletrônico e dashboard analítico.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Landing Page TechStart</h3>
+                        <p>Site institucional para startup de tecnologia com animações modernas e formulários de captação de leads.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Sobre Mim -->
+            <section id="sobre" class="section">
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Minha História</h3>
+                        <p>Com mais de X anos de experiência em desenvolvimento web, transformo ideias em realidade digital. Apaixonado por tecnologia e sempre em busca de soluções inovadoras.</p>
+                    </div>
+                </div>
+                
+                <h3 style="text-align: center; margin: 3rem 0 2rem; color: #64ffda;">Tecnologias que Domino</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <div>HTML5</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <div>CSS3</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js-square"></i>
+                        <div>JavaScript</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <div>React</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-node-js"></i>
+                        <div>Node.js</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <div>Python</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <div>SQL</div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <div>Git</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Contato -->
+            <section id="contato" class="section">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <input type="text" id="assunto" name="assunto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
