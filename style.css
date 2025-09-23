@@ -398,3 +398,76 @@ body.light-theme {
 .light-theme .skill-item {
     background: rgba(255, 255, 255, 0.7);
 }
+
+/* Seção Benefícios */
+.benefit-section {
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefit-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.benefit-header h3 {
+    font-size: 2rem;
+    color: #64ffda;
+    margin-bottom: 1rem;
+}
+
+.benefit-header h3 i {
+    margin-right: 1rem;
+}
+
+.card h4 {
+    color: #64ffda;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.card ul li::before {
+    content: '•';
+    color: #64ffda;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.final-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(45deg, rgba(100, 255, 218, 0.1), rgba(123, 97, 255, 0.1));
+    border-radius: 20px;
+    margin-top: 3rem;
+}
+
+.final-cta h3 {
+    font-size: 2rem;
+    color: #64ffda;
+    margin-bottom: 1.5rem;
+}
+
+.final-cta p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.light-theme .benefit-section {
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
