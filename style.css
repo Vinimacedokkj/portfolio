@@ -330,6 +330,15 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.second-title {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.section-subtitle {
+    font-weight: 350;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .sidebar {
