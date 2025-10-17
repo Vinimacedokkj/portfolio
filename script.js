@@ -18,33 +18,11 @@ function showSection(sectionId) {
     }
 }
 
-// Toggle do tema
-function toggleTheme() {
-    const body = document.body;
-    const toggle = document.querySelector('.toggle-switch');
-    
-    body.classList.toggle('light-theme');
-    toggle.classList.toggle('active');
-    
-    // Salvar preferência no localStorage
-    const isLightTheme = body.classList.contains('light-theme');
-    localStorage.setItem('lightTheme', isLightTheme);
-}
-
 // Menu mobile
 function toggleMobileMenu() {
     const sidebar = document.getElementById('sidebar');
     sidebar.classList.toggle('mobile-open');
 }
-
-// Carregar tema salvo
-document.addEventListener('DOMContentLoaded', function() {
-    const savedTheme = localStorage.getItem('lightTheme');
-    if (savedTheme === 'true') {
-        document.body.classList.add('light-theme');
-        document.querySelector('.toggle-switch').classList.add('active');
-    }
-});
 
 // Fechar menu mobile ao clicar fora
 document.addEventListener('click', function(event) {
