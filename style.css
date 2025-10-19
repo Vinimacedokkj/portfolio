@@ -93,7 +93,6 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    white-space: nowrap;
     /* border: 3px solid orange; */
 }
 
@@ -266,11 +265,12 @@ body {
     margin-bottom: 20px;
 }
 
-/* Sobre mim */
+/* Sobre nós */
 .container-texto-imagem {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 3rem;
     margin: 2rem 0;
 }
@@ -280,12 +280,34 @@ body {
     max-width: 400px;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
     transition: transform 0.3s ease;
 }
 
 .sobre-mim-img:hover {
     transform: scale(1.02);
+}
+
+#sobre-nos-texto-grid {
+    width: 100%;
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+#sobre-nos-texto-card {
+    width: 100%;
+    max-width: 700px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+#sobre-nos-texto {
+    text-align: justify;
+    font-size: 1.2rem;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 .container-texto-imagem .cards-grid {
