@@ -292,9 +292,10 @@ body {
     margin: 3rem 0;
 }
 
-.sobre-nos-img {
-    width: 40%;
+#sobre-nos-img {
+    width: 100%;
     max-width: 400px;
+    min-width: 300px;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
@@ -302,7 +303,7 @@ body {
     padding: 30px;
 }
 
-.sobre-nos-img:hover {
+#sobre-nos-img:hover {
     transform: scale(1.02);
 }
 
@@ -395,7 +396,8 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.card h3 {
+.card h3,
+i.home-card-icon {
     font-size: 1.6rem;
     margin-bottom: 1.2rem;
     color: #64ffda;
@@ -618,6 +620,27 @@ body {
 
     .container-texto-imagem {
         gap: 1.5rem;
+    }
+}
+
+@media (max-width: 370px) {
+    #inicio .hero h1 {
+        font-size: 2rem;
+        padding: 0 9px;
+    }
+
+    #inicio .hero p {
+        font-size: 1rem;
+    }
+
+    #inicio .cta-button {
+        font-size: 0.99rem;
+        padding: 1rem 2rem;
+        width: 80%;
+    }
+
+    #inicio .cards-grid .card h3 {
+        font-size: 1rem;
     }
 }
 
