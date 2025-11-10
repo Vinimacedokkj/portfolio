@@ -12,6 +12,9 @@ body {
     color: #ffffff;
     overflow-x: hidden;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: pan-y;
 }
 
 .container {
@@ -31,7 +34,9 @@ body {
     z-index: 1000;
     transition: transform 0.3s ease;
     overflow-y: auto;
+    overflow-x: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Custom Scrollbar for Sidebar */
@@ -202,6 +207,8 @@ body {
     margin-left: 320px;
     padding: 3rem;
     background: transparent;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .section {
@@ -411,6 +418,8 @@ i.home-card-icon {
     border-radius: 12px;
     margin-bottom: 1.5rem;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    display: block;
 }
 
 .card p {
@@ -513,54 +522,155 @@ i.home-card-icon {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
     .sidebar {
         transform: translateX(-100%);
-        width: 300px;
+        width: 280px;
+        max-width: 85vw;
+        padding: 2rem 1.5rem;
+        padding-bottom: 2rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        top: 0;
+        left: 0;
+        max-height: 100vh;
     }
 
     .sidebar.mobile-open {
         transform: translateX(0);
     }
 
+    .sidebar .nav-menu {
+        margin-bottom: 1rem;
+    }
+
     .main-content {
         margin-left: 0;
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .hero {
+        padding: 3rem 1.5rem;
+        margin-bottom: 2.5rem;
     }
 
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        padding: 0;
     }
 
     .hero p {
-        padding: 0 2rem;
-        font-size: 1.2rem;
+        padding: 0;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        font-size: 0.95rem;
+        padding: 1rem 1.8rem;
+        width: auto;
+        max-width: 100%;
     }
 
     .cards-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.3;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    i.home-card-icon {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
     }
 
     .section-title {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.3;
     }
 
-    /* Sobre mim responsivo para mobile */
+    .second-title {
+        font-size: 1.5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    #inicio.section > h4 {
+        font-size: 1.2rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    /* Sobre nós responsivo para mobile */
     .container-texto-imagem {
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 1.5rem;
+        margin: 2rem 0;
     }
 
-    .sobre-mim-img {
-        width: 80%;
-        max-width: 300px;
-        order: 1;
+    #sobre-nos-img {
+        width: 100%;
+        max-width: 280px;
+        min-width: auto;
+        padding: 20px;
     }
 
     .container-texto-imagem .cards-grid {
         width: 100%;
-        order: 2;
+        margin: 0;
+    }
+
+    #sobre-nos-texto-card {
+        padding: 1.5rem;
+        max-width: 100%;
+        min-width: auto;
+    }
+
+    #sobre-nos-texto-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    #sobre-nos-texto {
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 
     .mobile-menu-btn {
@@ -568,22 +678,128 @@ i.home-card-icon {
         top: 1rem;
         left: 1rem;
         z-index: 1001;
-        background: rgba(100, 255, 218, 0.9);
+        background: rgba(100, 255, 218, 0.95);
         color: #0c1445;
         border: none;
-        padding: 1.5rem;
-        border-radius: 200px;
-        font-size: 1.2rem;
+        padding: 0;
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
+        border-radius: 50%;
+        font-size: 1.1rem;
         cursor: pointer;
-        display: block;
-        box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(100, 255, 218, 0.4);
         transition: all 0.3s ease;
+        overflow: visible;
+    }
+
+    .mobile-menu-btn i {
+        font-size: 1.1rem;
     }
 
     .mobile-menu-btn:hover {
         background: #64ffda;
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(100, 255, 218, 0.4);
+        box-shadow: 0 6px 20px rgba(100, 255, 218, 0.5);
+    }
+
+    .logo {
+        margin-bottom: 2rem;
+    }
+
+    .logo-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.9rem 1rem;
+    }
+
+    .social-links {
+        position: relative;
+        left: 0;
+        right: 0;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        bottom: auto;
+    }
+
+    .social-link {
+        font-size: 1.1rem;
+        padding: 0.6rem;
+    }
+
+    .card img.projeto-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        max-width: 100%;
+        display: block;
+    }
+
+    /* Prevenir zoom automático em inputs */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+        font-size: 16px !important;
+    }
+
+    /* Garantir que imagens não quebrem o layout */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Melhorar espaçamento geral */
+    .section {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .benefit-header h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .final-cta {
+        padding: 2rem 1.5rem;
+        margin-top: 2.5rem;
+    }
+
+    .final-cta h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .final-cta p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
+        padding: 1rem;
     }
 }
 
@@ -613,34 +829,99 @@ i.home-card-icon {
 
 /* Small Mobile */
 @media (max-width: 480px) {
-    .sobre-mim-img {
-        width: 90%;
-        max-width: 250px;
+    .main-content {
+        padding: 1.2rem 0.8rem;
     }
 
-    .container-texto-imagem {
-        gap: 1.5rem;
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .second-title {
+        font-size: 1.3rem;
+    }
+
+    .card {
+        padding: 1.2rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+
+    #sobre-nos-img {
+        max-width: 250px;
+        padding: 15px;
+    }
+
+    #sobre-nos-texto-card {
+        padding: 1.2rem;
+    }
+
+    .mobile-menu-btn {
+        width: 44px;
+        height: 44px;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .mobile-menu-btn i {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 370px) {
-    #inicio .hero h1 {
-        font-size: 2rem;
-        padding: 0 9px;
+    .hero h1 {
+        font-size: 1.5rem;
     }
 
-    #inicio .hero p {
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 0.9rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .second-title {
+        font-size: 1.2rem;
+    }
+
+    .card h3 {
         font-size: 1rem;
     }
 
-    #inicio .cta-button {
-        font-size: 0.99rem;
-        padding: 1rem 2rem;
-        width: 80%;
+    .card p {
+        font-size: 0.8rem;
     }
 
-    #inicio .cards-grid .card h3 {
-        font-size: 1rem;
+    .mobile-menu-btn {
+        width: 40px;
+        height: 40px;
+        padding: 0.7rem;
+        top: 0.8rem;
+        left: 0.8rem;
     }
 }
 
