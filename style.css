@@ -934,8 +934,8 @@ i.home-card-icon {
 
 /* Seção Benefícios */
 .benefit-section {
-    margin-bottom: 5rem;
-    padding: 3rem 0;
+    margin-bottom: 3rem;
+    padding: 0 0 3rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
