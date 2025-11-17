@@ -317,7 +317,7 @@ body {
 #sobre-nos-texto-grid {
     width: 100%;
     max-width: 1000px;
-    min-width: 300px;
+    /* min-width: 300px; */
     margin: 0 auto;
 }
 
@@ -341,7 +341,7 @@ body {
 }
 
 #sobre-nos-texto {
-    text-align: justify;
+    /* text-align: justify; */
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.7;
