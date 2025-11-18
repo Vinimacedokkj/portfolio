@@ -420,6 +420,16 @@ nav.scrolled {
     }
 }
 
+@media (max-width: 950px) {
+    .about-text {
+        order: 1;
+    }
+
+    .about-image .image-wrapper {
+        order: 0;
+    }
+}
+
 .stat-item {
     text-align: center;
 }
@@ -494,7 +504,7 @@ nav.scrolled {
     border: 1px solid rgba(87, 137, 199, 0.1);
     transition: all 0.4s ease;
     background: var(--white);
-    box-shadow: 0 4px 20px rgba(28, 38, 84, 0.05);
+    box-shadow: 0 4px 20px rgba(28, 38, 84, 0.9);
     cursor: pointer;
 }
 
