@@ -579,6 +579,14 @@ nav.scrolled {
     align-items: flex-start;
 }
 
+.contact-item a {
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: none;
+}
+
 .contact-icon {
     width: 56px;
     height: 56px;
@@ -680,6 +688,13 @@ nav.scrolled {
     display: flex;
     gap: 32px;
     flex-wrap: wrap;
+}
+
+@media (max-width: 470px) {
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .footer-link {
@@ -826,6 +841,8 @@ nav.scrolled {
     .btn {
         width: 100%;
     }
+
+
 }
 
 /* Scroll animations */
