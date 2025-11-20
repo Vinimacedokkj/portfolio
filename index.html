@@ -23,15 +23,26 @@
     <meta property="og:title" content="Nivon Tech - Criação de Websites Profissionais | Desenvolvimento Web">
     <meta property="og:description" content="Especialistas em criação de websites profissionais, desenvolvimento web, gerenciamento de redes sociais e soluções digitais completas. Transforme sua presença online.">
     <meta property="og:image" content="https://nivontech.com/assets/img/nivontech-logo.png">
+    <meta property="og:image:secure_url" content="https://nivontech.com/assets/img/nivontech-logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Nivon Tech - Logo da empresa especializada em criação de websites e desenvolvimento web">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Nivon Tech">
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://nivontech.com">
-    <meta property="twitter:title" content="Nivon Tech - Criação de Websites Profissionais">
-    <meta property="twitter:description" content="Especialistas em criação de websites profissionais, desenvolvimento web e soluções digitais completas.">
-    <meta property="twitter:image" content="https://nivontech.com/assets/img/nivontech-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://nivontech.com">
+    <meta name="twitter:title" content="Nivon Tech - Criação de Websites Profissionais">
+    <meta name="twitter:description" content="Especialistas em criação de websites profissionais, desenvolvimento web e soluções digitais completas.">
+    <meta name="twitter:image" content="https://nivontech.com/assets/img/nivontech-logo.png">
+    <meta name="twitter:image:alt" content="Nivon Tech - Logo da empresa especializada em criação de websites e desenvolvimento web">
+    
+    <!-- Google / Search Engine -->
+    <meta itemprop="name" content="Nivon Tech - Criação de Websites Profissionais">
+    <meta itemprop="description" content="Especialistas em criação de websites profissionais, desenvolvimento web, gerenciamento de redes sociais e soluções digitais completas.">
+    <meta itemprop="image" content="https://nivontech.com/assets/img/nivontech-logo.png">
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/img/Favicons/favicon.ico" type="image/x-icon">
@@ -432,7 +443,18 @@
         "@type": "Organization",
         "name": "Nivon Tech",
         "url": "https://nivontech.com",
-        "logo": "https://nivontech.com/assets/img/nivontech-logo.png",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nivontech.com/assets/img/nivontech-logo.png",
+            "width": 1200,
+            "height": 630
+        },
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://nivontech.com/assets/img/nivontech-logo.png",
+            "width": 1200,
+            "height": 630
+        },
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+55-11-93014-5556",
