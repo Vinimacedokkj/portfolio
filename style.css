@@ -910,6 +910,17 @@ nav.scrolled {
     .contact {
         padding-left: 16px;
         padding-right: 16px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .services {
@@ -942,9 +953,19 @@ nav.scrolled {
         padding: 0 8px;
     }
 
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        width: 100%;
+        max-width: 100%;
+    }
+
     .service-card {
         padding: 24px 16px;
         border-radius: 12px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .service-icon {
@@ -981,7 +1002,22 @@ nav.scrolled {
     }
 
     .portfolio-grid {
+        grid-template-columns: 1fr;
         gap: 24px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .portfolio-image-wrapper {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .portfolio-overlay {
