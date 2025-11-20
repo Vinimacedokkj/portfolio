@@ -299,7 +299,11 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form fade-in" id="contact-form">
+                <form class="contact-form fade-in" id="contact-form" name="contact" method="POST" netlify netlify-honeypot="bot-field" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="hidden">
+                        <label>Não preencha este campo se você for humano: <input name="bot-field" /></label>
+                    </p>
                     <div class="form-group">
                         <label for="name">Nome</label>
                         <input type="text" id="name" name="name" required>

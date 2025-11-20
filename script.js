@@ -110,12 +110,50 @@ document.querySelectorAll('.stat-number').forEach(stat => {
     statsObserver.observe(stat);
 });
 
-// Form submission - Aguarda DOM estar pronto
+// Form submission - Netlify Forms
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
+    // Verifica se há parâmetro de sucesso na URL (após redirecionamento da Netlify)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+        // Mostra mensagem de sucesso
+        showFormMessage('success', 'Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        // Remove o parâmetro da URL sem recarregar
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
     contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-        e.target.reset();
+        // Permite o submit normal para Netlify Forms
+        // Não usa preventDefault() para que o formulário seja enviado normalmente
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+        }
     });
+}
+
+// Função para mostrar mensagens do formulário
+function showFormMessage(type, message) {
+    // Remove mensagens anteriores
+    const existingMessage = document.querySelector('.form-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+
+    // Cria nova mensagem
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `form-message form-message-${type}`;
+    messageDiv.textContent = message;
+    
+    // Insere antes do botão de submit
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    if (submitButton) {
+        contactForm.insertBefore(messageDiv, submitButton);
+        
+        // Remove a mensagem após 5 segundos
+        setTimeout(() => {
+            messageDiv.remove();
+        }, 5000);
+    }
 }
