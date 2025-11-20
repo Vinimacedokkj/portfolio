@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nivontech.com/sitemap.xml
+
+# Bloquear arquivos desnecessários
+Disallow: /assets/img/Favicons/
+

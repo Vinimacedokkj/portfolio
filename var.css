@@ -1,0 +1,10 @@
+:root {
+    --blue-light: #5789C7;
+    --blue-dark: #1C2654;
+    --blue-darker: #172145;
+    --white: #ffffff;
+    --spacing-xl: 120px;
+    --spacing-lg: 80px;
+    --spacing-md: 60px;
+    --spacing-sm: 40px;
+}
