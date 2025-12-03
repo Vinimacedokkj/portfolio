@@ -157,3 +157,45 @@ function showFormMessage(type, message) {
         }, 5000);
     }
 }
+
+// Language Selector Dropdown
+const languageDropdown = document.querySelector('.language-dropdown');
+const languageBtn = document.querySelector('.language-btn');
+
+if (languageDropdown && languageBtn) {
+    // Toggle dropdown on button click
+    languageBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        languageDropdown.classList.toggle('active');
+        const isExpanded = languageDropdown.classList.contains('active');
+        languageBtn.setAttribute('aria-expanded', isExpanded);
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!languageDropdown.contains(e.target)) {
+            languageDropdown.classList.remove('active');
+            languageBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Close dropdown when clicking on a language option
+    const languageOptions = document.querySelectorAll('.language-option');
+    languageOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            languageDropdown.classList.remove('active');
+            languageBtn.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    // Close dropdown on mobile menu close
+    if (navLinks) {
+        const originalToggle = navLinks.classList.toggle;
+        navLinks.addEventListener('click', (e) => {
+            if (e.target.classList.contains('nav-link') && navLinks.classList.contains('active')) {
+                languageDropdown.classList.remove('active');
+                languageBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+}
