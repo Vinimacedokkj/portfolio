@@ -576,6 +576,10 @@ nav.scrolled {
     line-height: 1.6;
 }
 
+#outros-projetos {
+    margin-top: 100px; 
+}
+
 /* Contact Section */
 .contact {
     padding: var(--spacing-xl) 40px;
